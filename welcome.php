@@ -1,6 +1,9 @@
 <?php
-include "koneksi.php"
+    session_start();
 
+    if ($_SESSION['level'] = "") {
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -11,14 +14,13 @@ include "koneksi.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat datang</title>
 </head>
+
 <body>
-    <h1>Selamat datang di futesal</h1>
-    <p>Silahkan klik tombol daftar di bawah ini</p>
-    <a href="pendaftar.php">Daftar</a>
-   
-    <h3>Masuk sebagai admin</h3>
-    <a href="data_lapangan.php">Isi data lapangan</a> ||
-    <a href="data_pembayaran.php">Update pembayaran</a> 
+    <a href="logout.php">Logout</a>
+    <br>
+    <h1>Selamat Datang <?php echo strtoupper($_SESSION['username']) ?> di futesal</h1>
+    <p>silahkan klik tombol daftar di bawah ini</p>
+    <a href="form/pendaftar.php">Daftar</a>
 </body>
 
 </html>

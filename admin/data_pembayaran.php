@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php"
+include "../koneksi.php"
 
 ?>
 
@@ -14,9 +14,9 @@ include "koneksi.php"
 </head>
 
 <body>
-<a href="index.php">Back To Home</a>
+<a href="welcome.php">Back To Home</a>
     <h1>Silahkan isi data dibawah ini</h1>
-    <form action="input_data_pembayaran.php" method="post">
+    <form action="../input/input_data_pembayaran.php" method="post">
 
         <label for="">ID Pembayaran</label><br>
         <input type="text" name="id_pendaftar" id="" value="<?= rand(0000, 9999)?>" readonly>

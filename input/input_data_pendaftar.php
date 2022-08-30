@@ -1,6 +1,6 @@
 <?php
 
-include "koneksi.php";
+include "../koneksi.php";
 
 $id_pendaftar = $_POST['id_pendaftar'];
 $nama_pendaftar = $_POST['nama_pendaftar'];
@@ -16,7 +16,7 @@ alamat='$alamat', jenis_lapangan='$jenis_lapangan', jam_mulai='$jam_mulai', jam_
 jenis_pembayaran='$jenis_pembayaran'");
 
 if ($insert == true) {
-    header('location: index.php');
+    header('location: ../admin/welcome.php');
 } else {
     echo "<script>alert('Gagal input data pendaftar')</script>";
 }
