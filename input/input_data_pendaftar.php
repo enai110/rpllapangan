@@ -16,7 +16,7 @@ alamat='$alamat', jenis_lapangan='$jenis_lapangan', jam_mulai='$jam_mulai', jam_
 jenis_pembayaran='$jenis_pembayaran'");
 
 if ($insert == true) {
-    header('location: ../admin/welcome.php');
+    header('location: ../welcome.php');
 } else {
     echo "<script>alert('Gagal input data pendaftar')</script>";
 }

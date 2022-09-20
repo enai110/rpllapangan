@@ -24,10 +24,12 @@ if (isset($_POST['submit'])) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['hak_akses'] = $row['hak_akses'];
             header('location: admin/welcome.php');
+            // var_dump($row);
         } elseif ($row['hak_akses'] == '9') {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['hak_akses'] = $row['hak_akses'];
                 header('location: welcome.php');
+                // var_dump($row);
         } else {
             echo"<script>alert('username atau password salah, silahkan di ulangi')</script>";
         }
@@ -52,9 +54,10 @@ if (isset($_POST['submit'])) {
         }
         .kotak_login{
             width: 350px;
-            background-color: white;
+            background-color: #C2E7DA;
             margin: 80px auto;
             padding: 30px 20px;
+            border-radius: 10px;
         }
         .judul{
             text-align: center;
@@ -67,12 +70,12 @@ if (isset($_POST['submit'])) {
             padding: 10px;
             font-size: 11pt;
             margin-bottom: 20px;
-            border-color: olive;
+            border-color: #6290C3;
             border-radius: 10px;
         }
         .tombol_login{
-            background-color: beige;
-            color: olive;
+            background-color: #94c890;
+            color: #068217;
             font-size: 11pt;
             width: 100%;
             border: none;
@@ -80,7 +83,7 @@ if (isset($_POST['submit'])) {
             padding: 10px 20px;
         }
         .link{
-            color: olive; 
+            color: #068217; 
             text-decoration: none;
             font-size: 11pt;
         }
@@ -94,7 +97,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div>
-        <h4 style="color: red;"><?= $_SESSION['ERROR'] ?></h4>
+        <h4 style="color: red;"><?= $_SESSION['error'] ?></h4>
     </div>
 
     <div class="kotak_login">
