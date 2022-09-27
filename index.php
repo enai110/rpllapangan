@@ -53,13 +53,14 @@ if (isset($_POST['submit'])) {
             background-repeat: no-repeat; 
         }
         .kotak_login{
-            width: 350px;
+            width: 400px;
             background-color: #C2E7DA;
-            margin: 80px auto;
+            margin: 230px auto;
             padding: 30px 20px;
             border-radius: 10px;
         }
         .judul{
+            font-size: 16pt;
             text-align: center;
             text-transform: uppercase;
             font-weight: bold; 
@@ -68,7 +69,7 @@ if (isset($_POST['submit'])) {
             box-sizing: border-box;
             width: 100%;
             padding: 10px;
-            font-size: 11pt;
+            font-size: 14pt;
             margin-bottom: 20px;
             border-color: #6290C3;
             border-radius: 10px;
@@ -76,7 +77,7 @@ if (isset($_POST['submit'])) {
         .tombol_login{
             background-color: #94c890;
             color: #068217;
-            font-size: 11pt;
+            font-size: 14pt;
             width: 100%;
             border: none;
             border-radius: 5px;
@@ -85,7 +86,7 @@ if (isset($_POST['submit'])) {
         .link{
             color: #068217; 
             text-decoration: none;
-            font-size: 11pt;
+            font-size: 14pt;
         }
         .text{
             text-align: center;
