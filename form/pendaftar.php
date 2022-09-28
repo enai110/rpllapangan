@@ -65,7 +65,7 @@ include "../koneksi.php"
     <ul class="menu">
         <li class="menu-list"> <a href="../welcome.php">Back To Home</a> </li>
         <li class="menu-list"> <a href="pendaftar.php">Daftar</a> </li>
-        <li class="menu-list"> <a href="../logout.php">log out</a> </li>
+        <li class="menu-list"> <a href="../logout.php">Logout</a> </li>
     </ul>
     <div class="judul"><h1>Silahkan isi form di bawah ini</h1></div>
     <form class="daftar" action="../input/input_data_pendaftar.php" method="post">
