@@ -1,95 +1,89 @@
 <?php
-
-include "../koneksi.php";
-
+    include "../koneksi.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lapangan</title>
-    <style>
-    .daftar{
-        background-color: #C2E7DA;
-        padding: 20px;
-        border-radius: 1px;
-    }
-    body{
+    <title>Table Lapangan</title>
+</head>
+<style>    
+    .body{
         margin: 0;
         padding: 0;
-    }
-    input, textarea, select{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-    button{
-        width: 100%;
-        background-color:#1A1B41;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        color:azure;
-    }
-    .judul{
-        width: 100;
-        padding: 1px 20px;
-        background-color: #C2E7DA;
-    }
+        }
     .menu{
         list-style-type: none;
-        margin: 0;
-        padding: 15px;
-        background-color:#1A1B41;
+        margin: 10px;
+        padding: 5px;
+        background-color: #1A1B41;
         overflow:hidden;
+    }
+    .menu-list{
+        float: left;
     }
     .menu-list a{
         display: block;
         color: white;
-        padding: 10px 10px;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 23px;
+    }
+    table{
+        border-collapse:collapse;
+        font:normal normal 12px Verdana,Arial,Sans-Serif;
+        color:  black;
+    }
+    table th {
+        background:#C2E7DA;
+        color:#1A1B41;
+        font-size:14px;
+    }
+    table th, table td {
+        vertical-align:top;
+        padding:5px 15px;
+        border:1px solid black;
+    }
+    table tr {
+        background:#F1FFE7;
+    }
+    table tr:nth-child(even) {
+        background:#F1FFE7;
     }
     </style>
-</head>
 <body>
-    <ul class="menu">
-        <li class="menu-list"> <a href="welcome.php">Back To Home</a> </li>
+<ul class="menu">
+        <li class="menu-list"><a href="../admin/welcome.php">Back To Home</a></li>
     </ul>
-    <div class="judul"> <h1>Silahkan isi data lapangan</h1> </div>
-    <form class="daftar" action= "../input/input_data_lapangan.php" method="post">
 
-        <label for="">ID Lapangan</label><br>
-        <input type="text" name="id_lapangan" id="" value="<?= rand(0000, 9999)?>" readonly>
-        <br><br>
-        <label for="">Jenis Lapangan</label><br>
-        <select name="jenis_lapangan" id="">
-            <option value="A">Lapangan A (Matras)</option>
-            <option value="B">Lapangan B (Sintetis)</option>
-            <option value="C">Lapangan C (vinyl)</option>
-        </select>
-        <br><br>
-        <label for="">Type Lapangan</label><br>
-        <select name="type_lapangan" id="">
-            <option value="matras">Matras</option>
-            <option value="sintetis">Sintetis</option>
-            <option value="vinyl">Vinyl</option>
-        </select>
-        <br><br>
+    <table class="table" border="1" align="center">
+<tr>
+            <th style="text-align:center">Id pendaftar</th>
+            <th style="text-align:center">Jenis lapangan</th>
+            <th style="text-align:center">Jam mulai</th>
+            <th style="text-align:center">Jam akhir</th>
+            <th style="text-align:center">Action</th>
+        </tr>
+    <?php
+    $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar");
+    while ($data=mysqli_fetch_array($query)){?>
+        <tr>
+            <td style="text-align:center"><?php echo $data['id_pendaftar'] ?></td>
+            <td style="text-align:center"><?php echo $data['jenis_lapangan'] ?></td>
+            <td style="text-align:center"><?php echo $data['jam_mulai'] ?></td>
+            <td style="text-align:center"><?php echo $data['jam_selesai'] ?></td>
+            <td style="text-align:center">
+                <a href="edit.php?id=<?php echo $data['id_pendaftar']?>">Edit</a>
+                <a class="delete" href="delete.php?id=<?php echo $data['id']?>">Delete</a>
+            </td> 
+        </tr>
+    <?php }
+    ?>
 
-        <button type="submit">KIRIM</button>
-
-    </form>
-
-</body>
+</table> </td>
+</tr>
+</table> </body>
 </html>

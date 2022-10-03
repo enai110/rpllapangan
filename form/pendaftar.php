@@ -64,17 +64,15 @@ include "../koneksi.php"
 <body>
     <ul class="menu">
         <li class="menu-list"> <a href="../welcome.php">Back To Home</a> </li>
-        <li class="menu-list"> <a href="pendaftar.php">Daftar</a> </li>
-        <li class="menu-list"> <a href="../logout.php">Logout</a> </li>
     </ul>
     <div class="judul"><h1>Silahkan isi form di bawah ini</h1></div>
     <form class="daftar" action="../input/input_data_pendaftar.php" method="post">
         
     <label for="">Id Pendaftar</label><br>
-    <input type="text" name="id_pendaftar" id=""value="<?= rand(0000, 9999)?>" readonly>
+    <input type="text" name="id_pendaftar" id="" value="<?= rand(0000, 9999)?>" readonly>
     <br><br>
     <label for="">Nama Pendaftar</label><br>
-    <input type="text" name="nama_pendaftar" id="">
+    <input type="text" name="nama_pendaftar" id="" value="<?= rand(0000, 9999)?>" readonly>
     <br><br>
     <label for="">Nomor hp</label><br>
     <input type="text" name="nomor_hp" id="">
@@ -98,7 +96,9 @@ include "../koneksi.php"
     <label for="">jenis Pembayaran</label><br>
     <select name="jenis_pembayaran" id="">
         <option value="cash">Cash</option>
-        <option value="transfer">Transfer</option>
+        <option value="gopay">Gopay</option>
+        <option value="dana">Dana</option>
+        <option value="mbanking">M-Banking</option>
     </select>
 
     <br><br>

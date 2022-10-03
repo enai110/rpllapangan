@@ -9,7 +9,11 @@ $insert = mysqli_query($koneksi, "INSERT INTO data_lapangan SET id_lapangan='$id
 jenis_lapangan='$jenis_lapangan', type_lapangan='$type_lapangan'");
 
 if ($insert == true) {
-    header('location: ../admin//welcome.php');
+    $message ='Pesanan Anda Sudah Masuk.';
+    echo "<SCRIPT> //not showing me this 
+    alert('$message')
+    window.location.replace('../admin/welcome.php');
+    </SCRIPT>";
 } else {
     echo "<script>alert('Gagal input data lapangan')</script>";
 }

@@ -111,10 +111,11 @@ if (isset($_POST['submit'])) {
             <br><br>
             <button class="tombol_login" name="submit" class="btn">Login</button>
 
-            <p class="text">Anda belum punya akun? <a class="link" href="#">Register</a><p>
+            <p class="text">Anda belum punya akun? <a href="./form/register.php" class="link">Register</a><p>
                 
         </form>
     </div>
+    
 </body>
 
 </html>

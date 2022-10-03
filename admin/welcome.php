@@ -73,14 +73,15 @@ if($_SESSION['level'] = "") {
 </head>
 <body>
    <ul class="menu">
-        <li class="menu-list"> <a href="../logout.php">LOGOUT</a> </li>
-        <li class="menu-list"> <a href="data_lapangan.php">isi data lapangan</a> </li>
-        <li class="menu-list"> <a href="data_pembayaran.php">update pembayaran</a> </li>
+        <li class="menu-list"> <a href="../logout.php">Logout</a> </li>
+        <li class="menu-list"> <a href="data_lapangan.php">Table Data Lapangan</a> </li>
+        <li class="menu-list"> <a href="table_pendaftar.php">Table Pendaftar</a> </li>
+        <li class="menu-list"> <a href="table_pembayaran.php">Table Pembayaran</a> </li>
    </ul>
    <div class="jumbotron">
     <div class="container">
     <h3>Masuk sebagai admin</h3>
-    <p>Selamat datang, <?php echo strtoupper($_SESSION['username']) ?>!. kamu berada di page admin</p>
+    <p>Selamat datang, NAI. kamu berada di page admin</p>
     </div>
      </div>
 </body>
