@@ -4,7 +4,7 @@ include "../koneksi.php";
     function registerasi($data){
         global $koneksi;
 
-        $id_user =$_POST["id_user"];
+        
         $username = strtolower(stripslashes($data["username"]));
         $password = mysqli_real_escape_string($koneksi, $data["password"]);
         $password2 = mysqli_real_escape_string($koneksi,$data["password2"]);
@@ -29,7 +29,7 @@ include "../koneksi.php";
     
     //memasukan ke database
     
-   mysqli_query($koneksi, "INSERT INTO login VALUES('','$id_user','$username','$password','9')");
+   mysqli_query($koneksi, "INSERT INTO login VALUES('','$username','$password','9')");
 
    return mysqli_affected_rows($koneksi);
     }
